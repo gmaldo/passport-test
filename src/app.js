@@ -46,7 +46,7 @@ initializePassport()
 app.use(passport.initialize())
 //app.use(passport.session())
 
-app.use('/',userRouter)
+app.use('/api/sessions/',userRouter)
 
 
 app.engine('handlebars', handlebars.engine())

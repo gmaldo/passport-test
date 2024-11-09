@@ -15,12 +15,13 @@ router.get("/login", async (req, res) => {
 })
 
 router.post('/signup', passport.authenticate('signup', {session: false, failureRedirect: '/failsignup' }), async (req, res) => {
-    res.send({ status: "success", message: "usuario registrado" })
+    //res.send({ status: "success", message: "usuario registrado" })
+    res.redirect('/api/sessions/login'); 
 });
 
 router.get('/failsignup', async (req, res) => {
     console.log('Registro fallido')
-    res.send({ error: "failed" })
+    res.send({ error: "failed on sign up" })
 })
 router.post('/login', passport.authenticate('login', {session: false, failureRedirect: '/faillogin' }), async (req, res) => {
     if (!req.user) return res.status(401).send({ status: "error", error: "Usuario no encontrado" })
@@ -39,7 +40,7 @@ router.get('/faillogin', async (req, res) => {
 
 router.post('/logout', (req, res) => {
     res.clearCookie('jwt');
-    return res.redirect('/login'); 
+    return res.redirect('/api/sessions/login'); 
 })
 
 // router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
@@ -51,7 +52,7 @@ router.get('/current', passportUtils.passportCall('jwt'), (req, res) => {
     //passport me da el usuario en req.user
 
     if (!req.user) {
-        return res.redirect('/login'); 
+        return res.redirect('/api/sessions/login'); 
     }
 
    // console.log(req.user)

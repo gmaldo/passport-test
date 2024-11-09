@@ -13,7 +13,7 @@
 
     <a href="/auth/github" class="github-login">Iniciar sesión con GitHub</a>
 </form> --}}
-<form class="loginform" action="/login" method="POST">
+<form class="loginform" action="/api/sessions/login" method="POST">
     <h2>Iniciar sesión</h2>
 
     {{#if error}}
@@ -30,9 +30,9 @@
 
     <div class="divider">o</div>
 
-    <a href="/github" class="github-login">Iniciar sesión con GitHub</a>
+    <a href="/api/sessions/github" class="github-login">Iniciar sesión con GitHub</a>
     <div class="signup-section">
         <p>¿No tienes cuenta?</p>
-        <a href="/signup" class="signup-button">Regístrate</a>
+        <a href="/api/sessions/signup" class="signup-button">Regístrate</a>
     </div>
 </form>
