@@ -1,0 +1,38 @@
+{{!-- <form class="loginform" action="/login" method="POST">
+    <h2>Iniciar sesión</h2>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">Iniciar sesión</button>
+
+    <div class="divider">o</div>
+
+    <a href="/auth/github" class="github-login">Iniciar sesión con GitHub</a>
+</form> --}}
+<form class="loginform" action="/login" method="POST">
+    <h2>Iniciar sesión</h2>
+
+    {{#if error}}
+        <div class="error-message">Correo o contraseña incorrectos. Intenta de nuevo.</div>
+    {{/if}}
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">Iniciar sesión</button>
+
+    <div class="divider">o</div>
+
+    <a href="/github" class="github-login">Iniciar sesión con GitHub</a>
+    <div class="signup-section">
+        <p>¿No tienes cuenta?</p>
+        <a href="/signup" class="signup-button">Regístrate</a>
+    </div>
+</form>

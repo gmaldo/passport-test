@@ -1,0 +1,238 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Contenedor del formulario */
+form {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Título */
+form h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+/* Etiquetas y campos de entrada */
+form label {
+    display: block;
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+form input:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+/* Botón de envío */
+form button {
+    width: 100%;
+    padding: 0.8rem;
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1.2rem;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #357ab7;
+}
+
+/* Mensaje de error */
+.error-message {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 0.8rem;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+
+/* Divider para separación entre métodos de autenticación */
+.divider {
+    margin: 1.5rem 0;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Botón para login con GitHub */
+.github-login {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    background: #333;
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.github-login:hover {
+    background: #444;
+}
+
+.signup-section {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.signup-button {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: #4a90e2;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.signup-button:hover {
+    background: #357ab7;
+}
+.login-section {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.login-link {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.login-link:hover {
+    color: #357ab7;
+}
+
+.success-message {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.success-message h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: bold;
+}
+.current-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: #4a90e2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.current-link:hover {
+    background: #357ab7;
+}
+
+.profile-container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.profile-container h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile-info p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+.profile-info strong {
+    color: #333;
+}
+
+.logout-button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1.5rem;
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.logout-button:hover {
+    background: #c0392b;
+}
+
+@media (max-width: 500px) {
+    form {
+        padding: 1.5rem;
+    }
+}
